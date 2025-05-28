@@ -7,11 +7,13 @@ TagManager:
   - Balll
   - Wall
   - Block
+  - Edge
+  - Prefab
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Processing
   - Water
   - UI
   - 
@@ -43,6 +45,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 3234505789
     locked: 0
   m_RenderingLayers:
   - Default
