@@ -9,6 +9,7 @@ TagManager:
   - Block
   - Edge
   - Prefab
+  - Jama
   layers:
   - Default
   - TransparentFX

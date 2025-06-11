@@ -1,19 +1,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+
+public class Game_Manager_01 : MonoBehaviour
 {
-    public GameObject clearUI;
     int blockCount;
     int blockDestroyedCount = 0;
-    int gameScore;
-    
+    int jamaDestroyedCount = 0;
+    int gameScore = 0;
+
 
     void Start()
     {
         blockCount = GameObject.FindGameObjectsWithTag("Block").Length;
+        //jamaCount = GameObject.FindGameObjectsWithTag("Jama")
         Debug.Log(blockCount);
-        clearUI.SetActive(false);
     }
 
     void Update()
@@ -29,21 +30,23 @@ public class GameManager : MonoBehaviour
             Debug.Log("All blocks destroyed!\nscore:" + gameScore);
             ShowClearUI();
         }
+        
+    }
+
+    public void OnjamaDestroyed()
+    {
+        jamaDestroyedCount++;
+        gameScore += 100;
+        Debug.Log(gameScore);
     }
 
     void ShowClearUI()
     {
-        clearUI.SetActive(true);
         Time.timeScale = 0f; // Pause the game
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene("Main");
+            SceneManager.LoadScene("1-1");
         }
-    }
-
-    public void OnGameScore()
-    {
-        gameScore += 1000;
     }
 }
