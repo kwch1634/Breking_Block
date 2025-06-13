@@ -1,9 +1,7 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Game_Start : MonoBehaviour
+public class Stagesele : MonoBehaviour
 {
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,9 +11,6 @@ public class Game_Start : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) || Input.GetMouseButtonDown(0))
-        {
-            SceneManager.LoadScene("StageSelect");
-        }
+        
     }
 }

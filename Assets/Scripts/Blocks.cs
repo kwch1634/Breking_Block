@@ -8,7 +8,6 @@ class Blocks : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         GameObject.Find("GameManager").GetComponent<GameManager>().OnBlockDestroyed();
-        particle.Play();
         Destroy(gameObject);
     }
 
